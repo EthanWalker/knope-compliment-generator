@@ -42,7 +42,15 @@ def generate_quote(name):
     noun = random.choice(noun_list)
     # set of quote templates for variety
     quote_templates = ["Oh {}, you {}, {}, {} {}.".format(name, adj_1, adj_2, adj_3, noun),
-                       "{} you, {}. You’re {} and you’re {}.".format(name, noun, adj_1, adj_2)]
+                       "{} you, {}. You're {} and you're {}.".format(name, noun, adj_1, adj_2),
+                       "{}, you {}, {} {}.".format(name, adj_1, adj_2, noun),
+                       "{} you're {} and I love you!".format(name, adj_1),
+                       "Oh {}, you're so {} and {} and {}.".format(name, adj_1, adj_2, adj_3),
+                       "{}, you {} {}.".format(name, adj_1, noun),
+                       "{}, you {} and {} {}.".format(name, adj_1, adj_2, noun),
+                       "{} you are so {}. {} {}.".format(name, adj_1, adj_1, name),
+                       "{}, nobody can match your {} energy.".format(name, adj_1),
+                       ]
     # create a random quote and return it!
     quote = random.choice(quote_templates)
     return quote

@@ -11,4 +11,5 @@ def index(name="Ann"):
     }
     return render_template("index.html", **context)
 
-app.run(debug = True, port = 8080, host = '127.0.0.1')
+if __name__ == "__main__":
+    app.run()
