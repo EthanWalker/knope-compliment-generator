@@ -2,25 +2,33 @@ import random
 
 
 # list of adjectives for use in generated quote
-adj_list = ['adaptable', 'amazing', 'crazy', 'beautiful', 'compassionate',
-            'courageous', 'cunning', 'exceptional', 'exuberant', 'graceful',
-            'generous', 'gorgeous','intuitive', 'magnificent', 'naive',
-            'passionate', 'persistent', 'pliable', 'radiant', 'rule-breaking',
-            'sophisticated', 'stunning', 'talented', 'whimsical', 'wild',
-            'elegant', 'good-looking', 'dynamic', 'mysterious', 'delicious',
-            'glowing', 'chestnut-haired', 'scholarly', 'wise', 'poetic',
-            'noble', 'powerful', 'brilliant', 'thoughtful', 'stupid hot',
-            'doe-eyed', 'magical']
+adj_list = ['adaptable', 'adorable', 'amazing', 'beautiful', 'brilliant',
+            'chestnut-haired', 'compassionate', 'cool under pressure',
+            'courageous', 'crazy', 'cunning', 'delicious', 'delightful',
+            'devious', 'doe-eyed', 'dynamic', 'elegant', 'exceptional',
+            'expensive', 'exuberant', 'generous', 'genius', 'glamorous',
+            'glowing', 'good-looking', 'gorgeous', 'graceful', 'handsome',
+            'interesting', 'intuitive', 'magical', 'magnificent',
+            'misunderstood', 'mysterious', 'naive', 'noble', 'opalescent',
+            'organized ', 'passionate', 'perfect', 'persistent', 'pliable',
+            'poetic', 'powerful', 'priceless', 'radiant', 'rainbow-infused',
+            'rule-breaking', 'sassy', 'scholarly', 'simple', 'smart as a whip',
+            'sophisticated', 'stunning', 'stupid hot', 'talented', 'thoughtful',
+            'tricky', 'unstoppable', 'whimsical', 'wild', 'wise', 'wondrous',]
 
 # list of nouns for use in generated quote
-noun_list = ['unicorn', 'mermaid', 'narwhal', 'tiger', 'sunfish', 'swordfish',
-             'nymph', 'middle school marching band', 'ice sculptor', 'human',
-             'potted plant', 'newborn baby', 'moth', 'minx', 'musk ox',
-             'trapeze artist', 'butterfly', 'monarch butterfly', 'penguin',
-             'emperor penguin', 'three-toed sloth', 'bush baby',
-             'olympic gymnast', 'baby turtle', 'stagecoach driver',
-             'Wes Anderson film', 'stack of waffles', 'sunflower',
-             'Victorian mansion', 'sun goddess']
+noun_list = ['baby turtle', 'barrel of monkeys', 'bush baby', 'butterfly',
+             'child', 'emperor penguin', 'fluorescent light bulb of truth',
+             'house cat', 'human', 'ice sculptor', 'inspiration', 'magician',
+             'mannequin come to life', 'mermaid', 'middle school marching band',
+             'miniature horse', 'minx', 'monarch butterfly', 'moth', 'musk ox',
+             'narwhal', 'newborn baby', 'nymph', 'olympic gymnast', 'penguin',
+             'phenomenal well of ideas', 'potted plant', 'rainbow of joy',
+             'space unicorn', 'stack of waffles', 'stagecoach driver',
+             'stairway to heaven', 'sun goddess', 'sunbonnet', 'sunfish',
+             'sunflower', 'swordfish', 'three-toed sloth', 'tiger',
+             'trapeze artist', 'treeshark', 'tropical fish', 'unicorn',
+             'Victorian mansion', 'Wes Anderson film',]
 
 def generate_quote(name):
     '''
