@@ -1,6 +1,5 @@
 import random
 
-
 # list of adjectives for use in generated quote
 adj_list = ['adaptable', 'adorable', 'amazing', 'beautiful', 'brilliant',
             'chestnut-haired', 'compassionate', 'cool under pressure',
@@ -37,28 +36,21 @@ def generate_quote(name):
     :param name: string name
     :return: string quote
     '''
-    adj_1 = random.choice(adj_list)
-    # set a 2d adjective and make sure it isn't the same as the first
-    adj_2 = random.choice(adj_list)
-    while adj_1 == adj_2:
-        adj_2 = random.choice(adj_list)
-    # set a 3rd adjective and make sure it  isn't the same as the first 2
-    adj_3 = random.choice(adj_list)
-    while adj_1 == adj_3 or adj_2 == adj_3:
-        adj_3 = random.choice(adj_list)
+    # set 3 adj from a random sample
+    adj_1, adj_2, adj_3 = random.sample(adj_list, 3)
+    # create a capitalized version of adj_1 for our special case
+    adj_1_cap = adj_1.capitalize()
     # set a noun
     noun = random.choice(noun_list)
     # set of quote templates for variety
-    quote_templates = ["Oh {}, you {}, {}, {} {}.".format(name, adj_1, adj_2, adj_3, noun),
-                       "{}, you {}. You're {} and you're {}.".format(name, noun, adj_1, adj_2),
-                       "{}, you {}, {} {}.".format(name, adj_1, adj_2, noun),
-                       "{} you're {} and I love you!".format(name, adj_1),
-                       "Oh {}, you're so {} and {} and {}.".format(name, adj_1, adj_2, adj_3),
-                       "{}, you {} {}.".format(name, adj_1, noun),
-                       "{}, you {} and {} {}.".format(name, adj_1, adj_2, noun),
-                       "{} you are so {}. {} {}.".format(name, adj_1, adj_1.capitalize(), name),
-                       "{}, nobody can match your {} energy.".format(name, adj_1),
-                       ]
+    quote_templates = ["Oh {name}, you {adj_1}, {adj_2}, {adj_3} {noun}.",
+                       "{name}, you {noun}. You're {adj_1} and you're {adj_2}.",
+                       "{name}, you {adj_1}, {adj_2} {noun}.",
+                       "{name} you're {adj_1} and I love you!",
+                       "Oh {name}, you're so {adj_1} and {adj_2} and {adj_3}.",
+                       "{name}, you {adj_1} {noun}.",
+                       "{name}, you {adj_1} and {adj_2} {noun}.",
+                       "{name} you are so {adj_1}. {adj_1_cap} {name}.",
+                       "{name}, nobody can match your {adj_1} energy.",]
     # create a random quote and return it!
-    quote = random.choice(quote_templates)
-    return quote
+    return random.choice(quote_templates).format(**vars())
