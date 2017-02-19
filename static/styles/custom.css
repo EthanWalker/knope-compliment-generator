@@ -4,4 +4,29 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    position: relative;
+    min-height: 100%;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+body {
+  /* Margin bottom by height of footer*/
+  margin-bottom: 100px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set fixed footer height */
+  height: 100px;
+  background-color: #f5f5f5;
+
+}
+.footer-social{
+    margin-bottom: 0;
 }
